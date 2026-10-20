@@ -730,7 +730,7 @@ void HidFillButtonsReport(
 		const auto& entry = buttonMap[i];
 		// If the index is 0xFF, its a special case and the button is always active
 		if (entry.idx == 0xFF) {
-			out->*entry.field = (uint8_t)item->Value;
+			out->*entry.field = 1;
 		} else {
 			HID_ReportItem_t* item = FindButtonItem(info, entry.idx, reportId);
 			if (item && USB_GetHIDReportItemInfo(reportId, payload, item)) {

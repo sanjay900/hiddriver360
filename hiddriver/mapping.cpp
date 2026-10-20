@@ -290,6 +290,15 @@ static HidDeviceMapping kStaticDeviceMappings[] = {
         {false, true, false, false, false, true},
     },
 
+    // PS3 Rock Band 3 Drums (wireless dongle)
+    {
+        0x12BA, 0x0210,
+        XINPUT_DEVSUBTYPE_DRUM_KIT, XINPUT_CAPS_FFB_SUPPORTED,
+        kDefaultAxisMap,  sizeof(kDefaultAxisMap) / sizeof(kDefaultAxisMap[0]),
+        kPlayStationRBDrumButtonMapping, sizeof(kPlayStationRBDrumButtonMapping) / sizeof(kPlayStationRBDrumButtonMapping[0]),
+        {false, true, false, false, false, true},
+    },
+
     // Wii Rock Band 1 Drums
     {
         0x12BA, 0x0005,
